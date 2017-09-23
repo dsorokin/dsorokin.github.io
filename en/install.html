@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>AivikaSoft - Installing Aivika</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+    <body>
+        <div class="lang">
+             <a href="../ru/index.html">Русский</a> &nbsp;&nbsp;&nbsp;
+             English
+        </div>
+        <div id="header">
+            <div id="navigation">
+                <a href="../index.html">Home</a>
+                <a href="../en/doc.html">Documentation</a>
+                <a href="../en/install.html">Installation</a>
+                <a href="../en/contact.html">Contact</a> 
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>Installing Aivika</h1>
+
+            <p>The instructions below are given for the case when you use <a href="http://docs.haskellstack.org/">Stack</a>.</p>
+<h3 id="using-open-source-libraries-only">Using Open Source Libraries Only</h3>
+<p>When using the open source Aivika libraries only, you can add the following dependencies to the <code>extra-deps</code> section in your <code>stack.yaml</code> file:</p>
+<pre><code>- aivika-5.2
+- aivika-transformers-5.2
+- aivika-distributed-0.7.4
+- aivika-experiment-5.0
+- aivika-experiment-chart-5.0
+- aivika-experiment-diagrams-5.0
+- aivika-experiment-cairo-5.0
+- aivika-realtime-0.3
+- aivika-branches-0.3
+- aivika-lattice-0.3
+- aivika-gpss-0.3</code></pre>
+<p>Now these libraries will be available in your Stack project.</p>
+<h3 id="using-aivika-extension-pack">Using Aivika Extension Pack</h3>
+<p>Aivika Extension Pack is a set of additional Aivika libraries which use is governed by the following <a href="../downloads/aivika-extension-pack/license.txt">License</a>.</p>
+<p>To include them in your Stack project, you should add the following locations to the <code>packages</code> section in your <code>stack.yaml</code> file like this:</p>
+<pre><code>- location:
+   https://github.com/dsorokin/aivika-experiment-entity/archive/v0.4.tar.gz
+  extra-dep: true
+- location:
+   https://github.com/dsorokin/aivika-experiment-entity-HDBC/archive/v0.4.tar.gz
+  extra-dep: true
+- location:
+   https://github.com/dsorokin/aivika-experiment-provider/archive/v0.2.tar.gz
+  extra-dep: true
+- location:
+   https://github.com/dsorokin/aivika-experiment-provider-distributed/archive/v0.2.tar.gz
+  extra-dep: true
+- location:
+   https://github.com/dsorokin/aivika-experiment-report/archive/v0.3.tar.gz
+  extra-dep: true
+- '.'</code></pre>
+<p>Then you should define the corresponding dependencies in the <code>extra-deps</code> section of the same file:</p>
+<pre><code>- aivika-experiment-entity-0.4
+- aivika-experiment-entity-HDBC-0.4
+- aivika-experiment-provider-0.2
+- aivika-experiment-provider-distributed-0.2
+- aivika-experiment-report-0.3</code></pre>
+<p>Now you can use Aivika Extension Pack in your Stack project.</p>
+<h3 id="api-reference-documentation">API Reference Documentation</h3>
+<p>After installing Aivika, you can build the API reference documentation:</p>
+<pre><code>$ stack haddock</code></pre>
+<h3 id="source-code">Source Code</h3>
+<p>The source code is available on GitHub.</p>
+<p>The following libraries have the open-source BSD3 license:</p>
+<ul>
+<li><p><a href="https://github.com/dsorokin/aivika" class="uri">https://github.com/dsorokin/aivika</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-transformers" class="uri">https://github.com/dsorokin/aivika-transformers</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-distributed" class="uri">https://github.com/dsorokin/aivika-distributed</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment" class="uri">https://github.com/dsorokin/aivika-experiment</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-chart" class="uri">https://github.com/dsorokin/aivika-experiment-chart</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-diagrams" class="uri">https://github.com/dsorokin/aivika-experiment-diagrams</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-cairo" class="uri">https://github.com/dsorokin/aivika-experiment-cairo</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-realtime" class="uri">https://github.com/dsorokin/aivika-realtime</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-branches" class="uri">https://github.com/dsorokin/aivika-branches</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-lattice" class="uri">https://github.com/dsorokin/aivika-lattice</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-gpss" class="uri">https://github.com/dsorokin/aivika-gpss</a></p></li>
+</ul>
+<p>The next libraries are a part of Aivika Extension Pack with its own license:</p>
+<ul>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-entity" class="uri">https://github.com/dsorokin/aivika-experiment-entity</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-entity-HDBC" class="uri">https://github.com/dsorokin/aivika-experiment-entity-HDBC</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-provider" class="uri">https://github.com/dsorokin/aivika-experiment-provider</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-provider-distributed" class="uri">https://github.com/dsorokin/aivika-experiment-provider-distributed</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-report" class="uri">https://github.com/dsorokin/aivika-experiment-report</a></p></li>
+</ul>
+        </div>
+        <div id="footer">
+            Copyright (C) 2009-2017 David Sorokin. All rights reserved.
+        </div>
+    </body>
+</html>

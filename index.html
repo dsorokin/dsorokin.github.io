@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>AivikaSoft - Aivika</title>
+        <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    </head>
+    <body>
+        <div class="lang">
+             <a href="./ru/index.html">Русский</a> &nbsp;&nbsp;&nbsp;
+             English
+        </div>
+        <div id="header">
+            <div id="navigation">
+                <a href="./index.html">Home</a>
+                <a href="./en/doc.html">Documentation</a>
+                <a href="./en/install.html">Installation</a>
+                <a href="./en/contact.html">Contact</a> 
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>Aivika</h1>
+
+            <p><strong>Aivika</strong> is a simulation framework consisting of programming libraries that allow you to use the general purpose Haskell programming language as a high-level modeling language primarily for discrete event simulation and partially for system dynamics and agent-based modeling. It is optimized for sequential execution, nested simulation and parallel distributed simulation. The complexity is hidden under easy-to-use computations.</p>
+<h4 id="easy-to-create-flight-simulators">Easy to Create Flight Simulators</h4>
+<p>You can create a flight simulator, where you can define the model and its simulation in Haskell and then create a desktop or Web application in C++, C# or Java so that the application would request for the parameters, run the simulation and then show the results to your client.</p>
+<p align="center">
+<img alt="Example" src="./images/example.png" />
+</p>
+<h4 id="monte-carlo-simulation-experiments">Monte Carlo Simulation Experiments</h4>
+<p>You can run Monte Carlo simulation experiments by the specified external parameters to provide the sensitivity analysis. Aivika can plot charts and histograms, generate CSV files, collect the statistics summary, represent the visual results in HTML files. Thousands of simulation runs can be launched in parallel as possible.</p>
+<h4 id="one-approach-for-sequential-nested-and-distributed-simulation">One Approach for Sequential, Nested and Distributed Simulation</h4>
+<p>The most exciting thing is that Aivika supports not only sequential simulation, but there are also versions for nested simulation and parallel distributed simulation based on the optimistic Time Warp method, which allows building very complex models. Everywhere the same unified approach is used.</p>
+<h4 id="multi-method-and-general-purpose">Multi-Method and General-Purpose</h4>
+<p>All versions of Aivika are general-purpose discrete event simulation libraries including the distributed version. All them support the time-oriented, event-oriented and process-oriented paradigms. They also support such advanced techniques as resource preemption. You can both dive into low-level details of the model activities and can define quite complex queue networks in a simple declarative way.</p>
+<h4 id="optimized-sequential-simulation">Optimized Sequential Simulation</h4>
+<p>The basic version of Aivika is optimized for sequential execution and can be sufficient for the most of use cases. It is quite fast and easy-to-use.</p>
+<h4 id="optimistic-distributed-simulation">Optimistic Distributed Simulation</h4>
+<p>The distributed version of Aivika is slower up to 6-9 times than the basic sequential version on the equivalent sequential models. It doesn’t imply that every distributed simulation will have such a speed as the message passing slows down the simulation and sometimes it may slow down essentially if there are many rollbacks. But this rough estimation shows what benefits you can gain, when utilizing properly the modern multi-core processors and multi-computer systems. It is just amazing to think about all this, when the Intel Core X processor with 36 cores becomes a reality nowadays!</p>
+<h4 id="recovering-distributed-simulation">Recovering Distributed Simulation</h4>
+<p>Aivika can recover the distributed simulation after temporary connection errors, which allows you to build the distributed model using ordinary cheap computers connected with help of the ordinary net. It is assumed that the connection errors are inevitable in complex environments and hence we have to deal with them.</p>
+<p>You can verify it yourself by launching the following distributed simulation <a href="https://github.com/dsorokin/aivika-distributed-test">test</a>.</p>
+<h4 id="gpss-like-dsl">GPSS-like DSL</h4>
+<p>There is also a module that supports a GPSS-like embedded DSL. It can be useful if you are going to translate your GPSS models into Aivika. The DSL is not fully equivalent, but it is quite similar to the original GPSS language. So, it supports the most of simulation blocks such as PREEMPT and even GATHER.</p>
+<p>Please look at the following <a href="https://github.com/dsorokin/aivika-gpss-test">example</a> that demonstrates the use of this GPSS-like DSL.</p>
+        </div>
+        <div id="footer">
+            Copyright (C) 2009-2017 David Sorokin. All rights reserved.
+        </div>
+    </body>
+</html>

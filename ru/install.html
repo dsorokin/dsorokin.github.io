@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>AivikaSoft - Установка Aivika</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+    <body>
+        <div class="lang">
+             Русский &nbsp;&nbsp;&nbsp;
+             <a href="../index.html">English</a>
+        </div>
+        <div id="header">
+            <div id="navigation">
+                <a href="../ru/index.html">Главная</a>
+                <a href="../ru/doc.html">Документация</a>
+                <a href="../ru/install.html">Установка</a>
+                <a href="../ru/contact.html">Контакты</a> 
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>Установка Aivika</h1>
+
+            <p>Инструкции ниже приведены для случая, если вы используете <a href="http://docs.haskellstack.org/">Stack</a>.</p>
+<h3 id="использование-только-библиотек-с-открытыми-исходниками">Использование только библиотек с открытыми исходниками</h3>
+<p>При использовании только библиотек Aivika с открытыми исходниками, вы можете добавить следующие зависимости в секцию <code>extra-deps</code> вашего файла <code>stack.yaml</code>:</p>
+<pre><code>- aivika-5.2
+- aivika-transformers-5.2
+- aivika-distributed-0.7.4
+- aivika-experiment-5.0
+- aivika-experiment-chart-5.0
+- aivika-experiment-diagrams-5.0
+- aivika-experiment-cairo-5.0
+- aivika-realtime-0.3
+- aivika-branches-0.3
+- aivika-lattice-0.3
+- aivika-gpss-0.3</code></pre>
+<p>Теперь эти библиотеки доступны в вашем проекте Stack.</p>
+<h3 id="использование-aivika-extension-pack">Использование Aivika Extension Pack</h3>
+<p>Aivika Extension Pack – это множество дополнительных библиотек Aivika, правила использования которых покрываются следующей <a href="../downloads/aivika-extension-pack/license.txt">лицензией</a>.</p>
+<p>Чтобы включить эти библиотеки в ваш проект Stack, вам следует добавить следующие элементы в секцию <code>packages</code> вашего файла <code>stack.yaml</code>, как показано ниже:</p>
+<pre><code>- location:
+   https://github.com/dsorokin/aivika-experiment-entity/archive/v0.4.tar.gz
+  extra-dep: true
+- location:
+   https://github.com/dsorokin/aivika-experiment-entity-HDBC/archive/v0.4.tar.gz
+  extra-dep: true
+- location:
+   https://github.com/dsorokin/aivika-experiment-provider/archive/v0.2.tar.gz
+  extra-dep: true
+- location:
+   https://github.com/dsorokin/aivika-experiment-provider-distributed/archive/v0.2.tar.gz
+  extra-dep: true
+- location:
+   https://github.com/dsorokin/aivika-experiment-report/archive/v0.3.tar.gz
+  extra-dep: true
+- '.'</code></pre>
+<p>Затем вам следует определить соответствующие зависимости в секции <code>extra-deps</code> того же файла:</p>
+<pre><code>- aivika-experiment-entity-0.4
+- aivika-experiment-entity-HDBC-0.4
+- aivika-experiment-provider-0.2
+- aivika-experiment-provider-distributed-0.2
+- aivika-experiment-report-0.3</code></pre>
+<p>Теперь вы можете использовать Aivika Extension Pack в вашем проекте Stack.</p>
+<h3 id="документация-по-api">Документация по API</h3>
+<p>После установки вы можете сгенерировать документацию по API следующим образом:</p>
+<pre><code>$ stack haddock</code></pre>
+<h3 id="исходный-код">Исходный код</h3>
+<p>Исходный код доступен на GitHub.</p>
+<p>Следующие библиотеки имеют открытую лицензию BSD3:</p>
+<ul>
+<li><p><a href="https://github.com/dsorokin/aivika" class="uri">https://github.com/dsorokin/aivika</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-transformers" class="uri">https://github.com/dsorokin/aivika-transformers</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-distributed" class="uri">https://github.com/dsorokin/aivika-distributed</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment" class="uri">https://github.com/dsorokin/aivika-experiment</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-chart" class="uri">https://github.com/dsorokin/aivika-experiment-chart</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-diagrams" class="uri">https://github.com/dsorokin/aivika-experiment-diagrams</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-cairo" class="uri">https://github.com/dsorokin/aivika-experiment-cairo</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-realtime" class="uri">https://github.com/dsorokin/aivika-realtime</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-branches" class="uri">https://github.com/dsorokin/aivika-branches</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-lattice" class="uri">https://github.com/dsorokin/aivika-lattice</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-gpss" class="uri">https://github.com/dsorokin/aivika-gpss</a></p></li>
+</ul>
+<p>Другие библиотеки являются частью Aivika Extension Pack под отдельной лицензией:</p>
+<ul>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-entity" class="uri">https://github.com/dsorokin/aivika-experiment-entity</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-entity-HDBC" class="uri">https://github.com/dsorokin/aivika-experiment-entity-HDBC</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-provider" class="uri">https://github.com/dsorokin/aivika-experiment-provider</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-provider-distributed" class="uri">https://github.com/dsorokin/aivika-experiment-provider-distributed</a></p></li>
+<li><p><a href="https://github.com/dsorokin/aivika-experiment-report" class="uri">https://github.com/dsorokin/aivika-experiment-report</a></p></li>
+</ul>
+        </div>
+        <div id="footer">
+            (C) 2009-2017 Давид Сорокин.
+        </div>
+    </body>
+</html>
