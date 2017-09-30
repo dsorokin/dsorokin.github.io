@@ -26,17 +26,17 @@
             <p>The instructions below are given for the case when you use <a href="http://docs.haskellstack.org/">Stack</a>.</p>
 <h3 id="using-open-source-libraries-only">Using Open Source Libraries Only</h3>
 <p>When using the open source Aivika libraries only, you can add the following dependencies to the <code>extra-deps</code> section in your <code>stack.yaml</code> file:</p>
-<pre><code>- aivika-5.2
-- aivika-transformers-5.2
+<pre><code>- aivika-5.3
+- aivika-transformers-5.3
 - aivika-distributed-0.7.4
-- aivika-experiment-5.0
-- aivika-experiment-chart-5.0
-- aivika-experiment-diagrams-5.0
-- aivika-experiment-cairo-5.0
+- aivika-experiment-5.1
+- aivika-experiment-chart-5.1
+- aivika-experiment-diagrams-5.1
+- aivika-experiment-cairo-5.1
 - aivika-realtime-0.3
 - aivika-branches-0.3
 - aivika-lattice-0.3
-- aivika-gpss-0.3</code></pre>
+- aivika-gpss-0.4</code></pre>
 <p>Now these libraries will be available in your Stack project.</p>
 <h3 id="using-aivika-extension-pack">Using Aivika Extension Pack</h3>
 <p>Aivika Extension Pack is a set of additional Aivika libraries which use is governed by the following <a href="../downloads/aivika-extension-pack/license.txt">License</a>.</p>
@@ -48,21 +48,21 @@
    https://github.com/dsorokin/aivika-experiment-entity-HDBC/archive/v0.4.tar.gz
   extra-dep: true
 - location:
-   https://github.com/dsorokin/aivika-experiment-provider/archive/v0.2.tar.gz
+   https://github.com/dsorokin/aivika-experiment-provider/archive/v0.3.tar.gz
   extra-dep: true
 - location:
    https://github.com/dsorokin/aivika-experiment-provider-distributed/archive/v0.2.tar.gz
   extra-dep: true
 - location:
-   https://github.com/dsorokin/aivika-experiment-report/archive/v0.3.tar.gz
+   https://github.com/dsorokin/aivika-experiment-report/archive/v0.4.tar.gz
   extra-dep: true
 - '.'</code></pre>
 <p>Then you should define the corresponding dependencies in the <code>extra-deps</code> section of the same file:</p>
 <pre><code>- aivika-experiment-entity-0.4
 - aivika-experiment-entity-HDBC-0.4
-- aivika-experiment-provider-0.2
+- aivika-experiment-provider-0.3
 - aivika-experiment-provider-distributed-0.2
-- aivika-experiment-report-0.3</code></pre>
+- aivika-experiment-report-0.4</code></pre>
 <p>Now you can use Aivika Extension Pack in your Stack project.</p>
 <h3 id="api-reference-documentation">API Reference Documentation</h3>
 <p>After installing Aivika, you can build the API reference documentation:</p>
