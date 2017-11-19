@@ -42,27 +42,27 @@
 <p>Aivika Extension Pack – это множество дополнительных библиотек Aivika, правила использования которых покрываются следующей <a href="../downloads/aivika-extension-pack/license.txt">лицензией</a>.</p>
 <p>Чтобы включить эти библиотеки в ваш проект Stack, вам следует добавить следующие элементы в секцию <code>packages</code> вашего файла <code>stack.yaml</code>, как показано ниже:</p>
 <pre><code>- location:
-   https://github.com/dsorokin/aivika-experiment-entity/archive/v0.4.tar.gz
+   https://github.com/dsorokin/aivika-experiment-entity/archive/v0.5.tar.gz
   extra-dep: true
 - location:
    https://github.com/dsorokin/aivika-experiment-entity-HDBC/archive/v0.4.tar.gz
   extra-dep: true
 - location:
-   https://github.com/dsorokin/aivika-experiment-provider/archive/v0.4.tar.gz
+   https://github.com/dsorokin/aivika-experiment-provider/archive/v0.5.tar.gz
   extra-dep: true
 - location:
    https://github.com/dsorokin/aivika-experiment-provider-distributed/archive/v0.2.tar.gz
   extra-dep: true
 - location:
-   https://github.com/dsorokin/aivika-experiment-report/archive/v0.4.tar.gz
+   https://github.com/dsorokin/aivika-experiment-report/archive/v0.5.tar.gz
   extra-dep: true
 - '.'</code></pre>
 <p>Затем вам следует определить соответствующие зависимости в секции <code>extra-deps</code> того же файла:</p>
-<pre><code>- aivika-experiment-entity-0.4
+<pre><code>- aivika-experiment-entity-0.5
 - aivika-experiment-entity-HDBC-0.4
-- aivika-experiment-provider-0.4
+- aivika-experiment-provider-0.5
 - aivika-experiment-provider-distributed-0.2
-- aivika-experiment-report-0.4</code></pre>
+- aivika-experiment-report-0.5</code></pre>
 <p>Теперь вы можете использовать Aivika Extension Pack в вашем проекте Stack.</p>
 <h3 id="документация-по-api">Документация по API</h3>
 <p>После установки вы можете сгенерировать документацию по API следующим образом:</p>
